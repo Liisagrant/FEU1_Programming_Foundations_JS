@@ -44,7 +44,7 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
               kills most of the human crew -- then continues to kill to hide its error.
 
         2020: The sole survivor of the journey to Jupiter ascends to the next level of humanity.
- 
+
 
 
   You are the sole survivor who will make the journey to Jupiter.
@@ -109,7 +109,7 @@ console.log(
   fullName,
   isAlive,
   hasJetPack,
-  suitColor, 
+  suitColor,
   eyes,
   eyeColor,
   hairColor,
@@ -217,8 +217,8 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
 
-/*
- 5. LUNAR LANDING:::::
+
+ /*5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
     to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
     This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
@@ -230,7 +230,7 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 
     You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
 
-    tip: varName.keyName (this is how to extract a value from an object)
+    tip: varName.keyName (this is how to extract a value from an object)*/
 
 console.log('\u{1F311} LUNAR LANDING:::::');
 
@@ -242,6 +242,77 @@ var lunarRadar = {
   lat: undefined,
   approachSpeed: undefined, // "ft per minute"
 };
+
+lunarRadar.isEnabled = true;
+lunarRadar.long = -20;
+lunarRadar.lat = -10;
+lunarRadar.approachSpeed = 280;
+
+if (
+  lunarRadar.isEnabled &&
+  lunarRadar.lat  &&
+  lunarRadar.long
+) {
+  console.log(
+    "\u{1F91F} looking good Lisa we are making our descent, now entering approach speed"
+  );
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+  console.log("\u{1F91F} looking good" + "lisa" + "we are making our descent, now entering approach speed");
+}
+if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed <= 299) {
+  console.log("\u{269B} well done Lisa we have touched down safely. Lets get some samples and get heck outta here!");
+}
+else if (lunarRadar.approachSpeed >= 300) {
+  console.log("\u{1F627}coming in hot Lisa decrese pitch!");
+}
+else if (lunarRadar.approachSpeed >= 400) {
+  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+}
+else if (lunarRadar.approachSpeed >=500) {
+  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+}
+else if (lunarRadar.approachSpeed >=600) {
+  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+}
+else if (lunarRadar.approachSpeed <=100) {
+  console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
+}
+ else {
+  console.log(
+    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+  );
+}
+} else {
+  console.log("Please enter an approach speed");
+}
+
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+  console.log("\u{1F91F} looking good" + "lisa" + "we are making our descent, now entering approach speed");
+  switch (true) {
+    case lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed <= 299:
+      console.log("\u{269B} well done Lisa we have touched down safely. Lets get some samples and get heck outta here!");
+      break;
+    case lunarRadar.approachSpeed >= 300:
+        console.log("\u{1F627}coming in hot Lisa decrese pitch!");
+        break;
+    case lunarRadar.approachSpeed >= 400:
+        console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+      break;
+    case lunarRadar.approachSpeed >=500:
+        console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+        break;
+    case lunarRadar.approachSpeed >=600:
+          console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+          break;
+    case lunarRadar.approachSpeed <=100:
+            console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
+          break;
+    default:
+            console.log( "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+}
+} else {
+  console.log("Please enter an approach speed");
+}
 
 // Level 1 convert this psuedocode to functioning code.
 
@@ -283,6 +354,8 @@ ELSE
 
 console.log('\u{1F319} PLANETARY INFO-DASH:::::');
 
+ */
+
 var planets = [
   [
     'MERCURY',
@@ -319,25 +392,25 @@ var planets = [
 ];
 
 console.group(planets[0][0]); // Mercury.
-console.log('Description:');
+console.log('Description:', planets[0][1][0]);
+console.log('Surface temperature:',planets [0][1][1]);
+console.log('Mass:',planets[0][1][2]);
+console.groupEnd();
+
+console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log('Description:',planets[1][1][0]);
 console.log('Surface temperature:');
 console.log('Mass:');
 console.groupEnd();
 
-console.group(); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log('Description:');
+console.group(planets[2][0]); // Earth.
+console.log('Description:', planets[2][1][0]);
 console.log('Surface temperature:');
 console.log('Mass:');
 console.groupEnd();
 
-console.group(); // Earth.
-console.log('Description:');
-console.log('Surface temperature:');
-console.log('Mass:');
-console.groupEnd();
-
-console.group(); // Mars.
-console.log('Description:');
+console.group(planets[3][0]); // Mars.
+console.log('Description:',planets[3][1][0]);
 console.log('Surface temperature:');
 console.log('Mass:');
 console.groupEnd();
