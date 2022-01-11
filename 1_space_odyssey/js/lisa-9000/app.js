@@ -91,12 +91,12 @@ var isAlive = true;
 var fullName = "Lisa";
 var suitColor = "Green";
 var eyes = 2;
-var eyeColor ="Green";
+var eyeColor = "Green";
 var hairColor = "brown";
 var legs = 2;
 var arms = 2;
 var hands = 2;
-var ears= 2;
+var ears = 2;
 var canWalk = true;
 var canRun = true;
 var canFly = true;
@@ -129,9 +129,9 @@ console.log(
     You need to send the droid out on a space walk to fix the satellite, with out it you can't communicate with earth.
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
-
-console.log('\u{1F6F0} BROKEN SATELLITE::::::');
 */
+console.log('\u{1F6F0} BROKEN SATELLITE::::::');
+
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
 
@@ -142,7 +142,7 @@ console.log('\u{1F6F0} BROKEN SATELLITE::::::');
 if (hasJetPack) {
   console.log('JetPack is enabled!!! off I go outside to fix the satellite');
 } else {
-    console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
+  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
 }
 
 /*
@@ -152,7 +152,8 @@ if (hasJetPack) {
       create an if condition in your loop to print only 1 response using a comparison operator.
 
 console.log('\u{1F327} METEOR SHOWER::::::');
-
+*/
+/*
 var responses = [
   'Call basecamp and ask for assistance, but they are far away',
   'Do nothing, just push through',
@@ -166,6 +167,7 @@ for (var i = 0; i <= responses.length; i++) {
   }
 }
 */
+
 var responses = [
   'Call basecamp and ask for assistance, but they are far away',
   'Do nothing, just push through',
@@ -173,11 +175,11 @@ var responses = [
   'ask humanoid-9000 to fly out there and shield the ship from the debris, this action could harm the humanoid',
 ];
 
-for (var i =0; i<= responses.length; i++) {
-    if (responses [i] === responses [2]) {
-        console.log(responses[i]);
-      }
-    }
+for (var i = 0; i <= responses.length; i++) {
+  if (responses[i] === responses[2]) {
+    console.log(responses[i]);
+  }
+}
 
 console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
 
@@ -187,14 +189,14 @@ console.log("\u{1F6F8} Swoosh -> -> Ship is steered to safety!");
     a) convert the pseudoscope to real code
        create the required variables below and fill in the correct values and dataTypes to make
        the if statements pass so that photonLaser fires pew pew pew.
-
+*/
 console.log('\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::');
 
-// a.
-var enemyCraft = false;
+
+var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
-var bullets = 100;
+var bullets = 900;
 
 if (enemyCraft && photonLaser && photonLaserEnabled) {
   if (bullets >= 100) {
@@ -218,19 +220,19 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
 */
 
 
- /*5. LUNAR LANDING:::::
-    We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
-    to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
-    This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
+/*5. LUNAR LANDING:::::
+   We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
+   to investigate it, we have aboard a NASA lunar module https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+   This module will allow to land safely on the moon with the aid of the landing radar which takes inputs.
 
-    Ensure the correct co-ordinates and approach speed are entered into the landing radar.
-    It's all automated we just have to ensure that the correct values are input ie. not undefined.
+   Ensure the correct co-ordinates and approach speed are entered into the landing radar.
+   It's all automated we just have to ensure that the correct values are input ie. not undefined.
 
-    The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
+   The lunar radar accepts approach speeds in increments of hundreds only, starting at 0 and maxing out at 700.
 
-    You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
+   You cannot edit the lunarRadar object directly you have to pass your values in via an interface called variables.
 
-    tip: varName.keyName (this is how to extract a value from an object)*/
+   tip: varName.keyName (this is how to extract a value from an object)*/
 
 console.log('\u{1F311} LUNAR LANDING:::::');
 
@@ -250,38 +252,38 @@ lunarRadar.approachSpeed = 280;
 
 if (
   lunarRadar.isEnabled &&
-  lunarRadar.lat  &&
+  lunarRadar.lat &&
   lunarRadar.long
 ) {
   console.log(
     "\u{1F91F} looking good Lisa we are making our descent, now entering approach speed"
   );
-if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
-  console.log("\u{1F91F} looking good" + "lisa" + "we are making our descent, now entering approach speed");
-}
-if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed <= 299) {
-  console.log("\u{269B} well done Lisa we have touched down safely. Lets get some samples and get heck outta here!");
-}
-else if (lunarRadar.approachSpeed >= 300) {
-  console.log("\u{1F627}coming in hot Lisa decrese pitch!");
-}
-else if (lunarRadar.approachSpeed >= 400) {
-  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
-}
-else if (lunarRadar.approachSpeed >=500) {
-  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
-}
-else if (lunarRadar.approachSpeed >=600) {
-  console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
-}
-else if (lunarRadar.approachSpeed <=100) {
-  console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
-}
- else {
-  console.log(
-    "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
-  );
-}
+  if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+    console.log("\u{1F91F} looking good" + "lisa" + "we are making our descent, now entering approach speed");
+  }
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed <= 299) {
+    console.log("\u{269B} well done Lisa we have touched down safely. Lets get some samples and get heck outta here!");
+  }
+  else if (lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627}coming in hot Lisa decrese pitch!");
+  }
+  else if (lunarRadar.approachSpeed >= 400) {
+    console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+  }
+  else if (lunarRadar.approachSpeed >= 500) {
+    console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+  }
+  else if (lunarRadar.approachSpeed >= 600) {
+    console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+  }
+  else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
+  }
+  else {
+    console.log(
+      "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance."
+    );
+  }
 } else {
   console.log("Please enter an approach speed");
 }
@@ -293,23 +295,23 @@ if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
       console.log("\u{269B} well done Lisa we have touched down safely. Lets get some samples and get heck outta here!");
       break;
     case lunarRadar.approachSpeed >= 300:
-        console.log("\u{1F627}coming in hot Lisa decrese pitch!");
-        break;
-    case lunarRadar.approachSpeed >= 400:
-        console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+      console.log("\u{1F627}coming in hot Lisa decrese pitch!");
       break;
-    case lunarRadar.approachSpeed >=500:
-        console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
-        break;
-    case lunarRadar.approachSpeed >=600:
-          console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
-          break;
-    case lunarRadar.approachSpeed <=100:
-            console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
-          break;
+    case lunarRadar.approachSpeed >= 400:
+      console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+      break;
+    case lunarRadar.approachSpeed >= 500:
+      console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+      break;
+    case lunarRadar.approachSpeed >= 600:
+      console.log("\u{1F627} coming in way too hot Lisa decrease pitch!");
+      break;
+    case lunarRadar.approachSpeed <= 100:
+      console.log("\u{1F47D} hmmm need a bit more heat Lisa lets increase pitch and we should have a smooth landing");
+      break;
     default:
-            console.log( "\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
-}
+      console.log("\u{1F9F1}\u{1F9F1}\u{1F9F1}\u{1F9F1} Lisa you went down like a ton of bricks, the wrecked remains of the lunar lander can still be seen from earth twinkling in the distance.");
+  }
 } else {
   console.log("Please enter an approach speed");
 }
@@ -391,29 +393,59 @@ var planets = [
   ],
 ];
 
-console.group(planets[0][0]); // Mercury.
+planets.unshift(
+  ["VENUS",
+    [
+      "Venus is the second planet from the Sun and the sixth-largest. Together with Mercury, they are the only planets without a satellite, even though Mercury is closer to the sun, Venus is the hottest planet.",
+      "462° C",
+      "4,867,320,000,000,000 billion kg (0.815 x Earth)"
+    ],
+  ],
+  ["SATUREN",
+    [
+      "Saturn is the sixth planet from the Sun, with the largest planetary rings in the Solar System. It is the second-largest planet after Jupiter, and recently, with many other moons being discovered, it surpassed the number of Jupiter’s moons and is now considered the planet with the most numerous satellites.",
+      "-139 °C",
+      "568,319,000,000,000,000 billion kg (95.16 x Earth)"
+    ],
+  ],
+);
+
+console.group(planets[0][0]); // Venus.
 console.log('Description:', planets[0][1][0]);
-console.log('Surface temperature:',planets [0][1][1]);
-console.log('Mass:',planets[0][1][2]);
+console.log('Surface temperature:', planets[0][1][1]);
+console.log('Mass:', planets[0][1][2]);
 console.groupEnd();
 
-console.group(planets[1][0]); // Jupiter. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
-console.log('Description:',planets[1][1][0]);
-console.log('Surface temperature:');
-console.log('Mass:');
+console.group(planets[1][0]); // Saturen. (please insert the correct array index to add Earth as a string label to the console, as previous done for Mercury)
+console.log('Description:', planets[1][1][0]);
+console.log('Surface temperature', planets[1][1][1]);
+console.log('Mass:', planets[1][1][2]);
 console.groupEnd();
 
-console.group(planets[2][0]); // Earth.
+console.group(planets[2][0]); // Mercury.
 console.log('Description:', planets[2][1][0]);
-console.log('Surface temperature:');
-console.log('Mass:');
+console.log('Surface temperature:', planets[2][1][1]);
+console.log('Mass:', planets[2][1][2]);
 console.groupEnd();
 
-console.group(planets[3][0]); // Mars.
-console.log('Description:',planets[3][1][0]);
-console.log('Surface temperature:');
-console.log('Mass:');
+console.group(planets[3][0]); // Jupiter.
+console.log('Description:', planets[3][1][0]);
+console.log('Surface temperature:', planets[3][1][1]);
+console.log('Mass:', planets[3][1][2]);
 console.groupEnd();
+
+console.group(planets[4][0]); // Earth.
+console.log('Description:', planets[4][1][0]);
+console.log('Surface temperature:', planets[4][1][1]);
+console.log('Mass:', planets[4][1][2]);
+console.groupEnd();
+
+console.group(planets[5][0]); // Mars.
+console.log('Description:', planets[5][1][0]);
+console.log('Surface temperature:', planets[5][1][1]);
+console.log('Mass:', planets[5][1][2]);
+console.groupEnd();
+
 
 /*
  Level 2::::::::::::::
